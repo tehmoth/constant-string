@@ -1,0 +1,14 @@
+Build.PL
+Changes
+LICENSE
+MANIFEST
+MANIFEST.SKIP
+META.json
+META.yml
+README
+dist.json
+lib/constant/string.pm
+t/00_use.t
+t/01_test_strings.t
+t/02_test_dualvars.t
+t/03_test_objects.t
