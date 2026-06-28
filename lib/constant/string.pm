@@ -5,7 +5,7 @@ use warnings;
 use utf8;
 use constant (); 
 
-our $VERSION = '2026.27';
+our $VERSION = '2026.26';
 
 sub import {
     my ($class, @args) = @_;
