@@ -5,7 +5,7 @@ use warnings;
 use utf8;
 use constant (); 
 
-our $VERSION = '2026.026007';
+our $VERSION = '2026.267';
 
 sub import {
     my ($class, @args) = @_;
@@ -31,7 +31,7 @@ constant::string - Perl pragma to declare constants whose values are their own n
 
 =head1 VERSION
 
-version 2026.26
+version 2026.267
 
 =head1 SYNOPSIS
 
