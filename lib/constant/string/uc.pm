@@ -1,4 +1,4 @@
-package constant::string;
+package constant::string::uc;
 
 use strict;
 use warnings;
@@ -11,7 +11,8 @@ sub import {
     my ($class, @args) = @_;
     my $caller = caller;
 
-	my %constants = map +( "${caller}::$_" => $_ ), @args;
+	my %constants = map
+		+(join( '::', "$caller", uc($_) ), $_), @args;
 
 	constant->import( \%constants ) if %constants;
 
@@ -27,7 +28,7 @@ __END__
 
 =head1 NAME
 
-constant::string - Perl pragma to declare constants whose values are their own names
+constant::string::uc - Perl pragma to declare constants with the uppercased values as names
 
 =head1 VERSION
 
@@ -35,17 +36,17 @@ version 2026.26
 
 =head1 SYNOPSIS
 
-    use constant::string qw( FOO BAR BAZ );
+    use constant::string::uc qw( foo bar baz );
 
-    print FOO;  # Outputs: FOO
-    print BAR;  # Outputs: BAR
+    print FOO;  # Outputs: foo
+    print BAR;  # Outputs: Bar
 
 =head1 DESCRIPTION
 
 This pragma allows you to declare compile-time constants without having to explicitly 
-repeat their names as string values. Passing a list of strings to C<use constant::string> 
-creates constant subroutines in the caller's namespace where each constant returns 
-its own name.
+repeat their names as string values. Passing a list of strings to C<use constant::string::uc> 
+creates UPPPERCASE constant subroutines in the caller's namespace where each constant returns 
+the original value passed to L<constant::string::uc>.
 
 It behaves exactly like the core L<constant> pragma under the hood, meaning these are 
 fully optimized, inlined compile-time constants—not regular subroutine calls.
@@ -55,6 +56,8 @@ fully optimized, inlined compile-time constants—not regular subroutine calls.
 =over 4
 
 =item * L<constant> - The core Perl pragma utilized under the hood.
+
+=item * L<constant::string> -  Perl pragma to declare constants with the same names as their values, no uppercasing
 
 =back
 
