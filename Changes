@@ -1,10 +1,7 @@
 Revision history for constant-string
 
-2026.375  2026-09-11 18:36:23-0400
-2026.375  2026-09-11 18:31:50-0400
-2026.375  2026-09-11 18:30:58-0400
-2026.375  2026-09-11 18:27:44-0400
 2026.375  2026-09-11 18:24:01-0400
+          - Correct Synopsis, add constant::string::ucfirst and tests
 2026.267  2026-06-28 20:43:11-0400
           - In which we try and create a new version that is considered larger by PAUSE and mbtiny regenerate
 2026.026007 2026-06-28 20:28:03-0400
