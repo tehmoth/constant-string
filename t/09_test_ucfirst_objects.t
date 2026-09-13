@@ -15,21 +15,21 @@ use Test::More;
 }
 
 
-use constant::string::uc 
+use constant::string::ucfirst
 	Stringy::Object->new( 'Foo' ),
 	Stringy::Object->new( 'bar' ),
 	Stringy::Object->new( 'BAZ' );
 
-ok( blessed FOO, 'constant FOO is a blessed reference' );
-ok( blessed BAR, 'constant BAR is a blessed reference' );
+ok( blessed Foo, 'constant Foo is a blessed reference' );
+ok( blessed Bar, 'constant Bar is a blessed reference' );
 ok( blessed BAZ, 'constant BAZ is a blessed reference' );
 
-ok( FOO->isa("Stringy::Object") , 'constant FOO is a "Stringy::Object"' );
-ok( BAR->isa("Stringy::Object") , 'constant BAR is a "Stringy::Object"' );
+ok( Foo->isa("Stringy::Object") , 'constant Foo is a "Stringy::Object"' );
+ok( Bar->isa("Stringy::Object") , 'constant Bar is a "Stringy::Object"' );
 ok( BAZ->isa("Stringy::Object") , 'constant BAZ is a "Stringy::Object"' );
 
-ok( FOO eq 'Foo', 'constant FOO is a constant with a string value of "Foo"' );
-ok( BAR eq 'bar', 'constant BAR is a constant with a string value of "bar"' );
+ok( Foo eq 'Foo', 'constant Foo is a constant with a string value of "Foo"' );
+ok( Bar eq 'bar', 'constant Bar is a constant with a string value of "bar"' );
 ok( BAZ eq 'BAZ', 'constant BAZ is a constant with a string value of "BAZ"' );
 
 
